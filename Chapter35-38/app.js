@@ -49,5 +49,100 @@ function calculator(num1,num2,operator){
 
 // Task 5
 function square(num){
-    
+    document.write(Math.pow(num,2));
 }
+//square(6);
+
+// Task 6
+function factorial(number){
+    if(number === 0 || number === 1){
+        return 1;
+    }
+    else{
+        out = factorial(number-1) * number;
+         return out;
+    }
+}
+
+//document.write(factorial(5));
+
+// Task 7
+function counting(){
+    var start = +prompt("Enter Starting Number");
+    var end = +prompt("Enter Ending Number");
+    for (start;start<=end;start++){
+        document.write(start+"<br>");
+    }
+}
+//counting();
+
+// Task 8
+function calculateHypotenuse(base,perp){
+    function calculateSquare(n){
+        return Math.pow(n,2);
+    }
+    return Math.sqrt(calculateSquare(base)+calculateSquare(perp));
+}
+//document.write(calculateHypotenuse(3,4)+"<br>");
+
+// Task 9
+function area(width,height){
+    return width*height;
+}
+//document.write(area(4,5)+"<br>");
+var width = 6;
+var height = 5;
+//document.write(area(width,height)+"<br>");
+
+// Task 10
+function palindromeChecker(word){
+    
+    var temp= "";
+    for (var j = word.length - 1; j>=0; j--){
+        temp += word[j];
+    } 
+
+    if( word === temp){
+        document.write(temp + " is a palindrome"+"<br>");
+    }
+}
+//palindromeChecker("madam");
+
+// Task 11
+function toTitleCase(string){
+    var lower = string.toLowerCase().split(" ");
+    for (var i=0;i<lower.length;i++){
+        lower[i] = lower[i].charAt(0).toUpperCase() + lower[i].slice(1); 
+        // first letter capital + remaining text
+    }
+    return lower.join(" ");
+}
+//document.write(toTitleCase("the quick brown fox"));
+
+// Task 12
+function longest(string){
+    var ar = string.split(" ");
+    var longest = 0
+    var idx = 0
+    for( var i = 0;i<ar.length;i++){
+        if(ar[i].length>longest){
+            longest = ar[i].length;
+            idx = i;
+        }
+    }
+    return ar[idx];
+}
+//document.write(longest("Web Development Tutorial")+"<br>");
+
+// Task 13
+function occurence(string,letter){
+    var string = string.toLowerCase();
+    var count = 0;
+    for(var i = 0;i<string.length;i++){
+        if(string[i]===letter){
+        count++;
+        }
+}
+    return count;
+}
+//document.write(occurence("JSResourceS.com","o")+"<br>");
