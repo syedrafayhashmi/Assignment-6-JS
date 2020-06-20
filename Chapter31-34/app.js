@@ -43,3 +43,26 @@ else{
 }
 
 // Task 8
+var laterDate = new Date("Dec 31 2020");
+document.write("Later date: " + laterDate+"<br>");
+
+// Task 9
+var RamadanDate = new Date("Apr 24 2020");
+var todayDate = new Date();
+var daysRamadan = (todayDate.getTime()-RamadanDate.getTime())/(1000*60*60*24);
+document.write(Math.floor(daysRamadan) +" days have passed since 1st Ramadan, 2020"+"<br>");
+
+// Task 10
+var refDate = new Date("Dec 5 2015");
+var anotherDate = new Date("Jan 1 2015");
+var dif = refDate.getTime()-anotherDate.getTime();
+document.write("On refernce date "+ refDate +","+ dif/(1000) + " seconds had passed since beginning of 2015" +"<br>");
+
+// Task 11
+var currentTime = new Date();
+document.write("current date: " + currentTime+"<br>");
+var currentHours = currentTime.getHours();
+var prevTime = currentTime.setHours(currentHours-1);
+document.write("1 hour ago, it was " + currentTime+"<br>");
+
+// Task 12
